@@ -1,0 +1,366 @@
+@font-face {
+    font-family: 'Irish Grover';
+    font-style: normal;
+    font-weight: 400;
+    src: url(https://fonts.gstatic.com/s/irishgrover/v23/buExpoi6YtLz2QW7LA4flVgv__RP.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    width: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    font-family: 'Irish Grover';
+    color: white;
+    scroll-behavior: smooth;
+    background: linear-gradient(180deg, #C93CBB 0%, #351032 56.77%, #000000 100%);
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+header a{
+    width: 10%;
+    height: auto;
+    z-index: 100;
+    border-radius: 100%;
+    position: fixed;
+}
+
+header a:hover img[alt='Whats']{
+    animation: Scale .5s ease-in-out forwards;
+}
+
+header img[alt='Whats']{
+    width: 10%;
+    height: auto;
+    border-radius: 100%;
+    position: fixed;
+}
+
+header #slider_holder{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+header #slider_holder #slider{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+header #slider_holder #slider img{
+    width: 100%;
+}
+
+main #Cardapio{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+main h2{
+    text-align: center;
+    padding: 30px 0;
+    text-shadow: 0px 0px 36px #19A379, 0px 0px 24px #19A379, 0px 0px 12px #FFFFFF;
+}
+
+main #Cardapio #Food{
+    background: url(img/bg-cardapio.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    display: grid;
+
+    text-shadow: 2px 2px 4px #000000aa;
+
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: 
+        'Comidas Bebidas';
+}
+
+main #Cardapio h3{
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+    text-decoration: underline;
+}
+
+main #Cardapio ul{
+    list-style: none;
+    width: 100%;
+    text-align: center;
+    line-height: 40px;
+}
+
+main #Cardapio #Comidas{
+    width: 100%;
+    grid-area: Comidas;
+}
+
+main #Cardapio #Bebidas{
+    width: 100%;
+    grid-area: Bebidas;
+}
+
+main #Cardapio #Pods{
+    width: 100%;
+    background: url(img/bg-Pods.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    background-color: #19A379;
+    box-shadow: 0px 0px 20px #19A379;
+    text-shadow: 2px 2px 2px #0008;
+}
+
+main #Cardapio #Pods ul{
+    line-height: 35px;
+}
+
+main #Kits{
+    display: flex;
+    flex-direction: column;
+}
+
+main #Kits article{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+main #Kits .cards{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+
+    box-shadow: 2px 2px 4px 0px #00000080;
+    border-radius: 30px;
+    padding: 15px;
+    background: linear-gradient(180deg, #615B84 0%, #26223F 100%);
+}
+
+main #Kits .cards img{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+main #Kits .cards h4{
+    text-align: center;
+    margin: 10px 0;
+    text-shadow: 0px 0px 36px #9A2E8F, 0px 0px 24px #9A2E8F, 0px 0px 12px #FFFFFF;
+}
+
+main #Kits .cards ol{
+    width: 100%;
+    display: flex;
+    line-height: 1.6em;
+    font-size: 0.8em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main #Camarote{
+    width: 100%;
+}
+
+main #Camarote div{
+    width: 100%;
+    background: url(img/bg-Camarote.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas: 
+        'txt1 .'
+        '. txt2'
+        'txt3 .';
+}
+
+main #Camarote p{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0;
+    text-shadow: 2px 2px 4px #00000080;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+main #Camarote b{
+    color: #2BFFF2;
+    text-shadow: 0px 0px 36px #2BFFF2, 0px 0px 24px #2BFFF2, 0px 0px 12px #FFFFFF;
+}
+
+main #Camarote #txt1{
+    grid-area: txt1;
+}
+
+main #Camarote #txt2{
+    grid-area: txt2;
+}
+
+main #Camarote #txt3{
+    grid-area: txt3;
+}
+
+main #Info{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 1.2em;
+    text-shadow: 2px 2px 4px #0008;
+}
+
+main #Info iframe{
+    margin: 30px 0;
+    width: 50%;
+    height: 50vh;
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px #0008;
+}
+
+#Welcome{
+    padding: 20px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #19A379;
+    text-shadow: 2px 2px 3px #0008;
+}
+
+#Welcome h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 50%;
+    height: 50%;
+}
+
+main footer{
+    margin: 0 0 calc(10vh + 10px) 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+#navigation{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+#navigation nav{
+    background: #0B000B;
+    box-shadow: 0px -7px 10px #9E00FF;
+    height: 10vh;
+    width: 100%;
+}
+
+#navigation nav ul{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+#navigation nav ul a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 3px #0008;
+}
+
+@keyframes Scale{
+    from{
+        transform: scale(1);
+    }to{
+        transform: scale(1.1);
+    }
+}
+
+@media (max-width: 376px){
+    main #Cardapio ul{
+        font-size: .1em;
+        line-height: 35px;
+    }
+
+    main #Cardapio #Food{
+        background-size: contain;
+    }
+}
+
+@media (max-width: 425px){
+    main #Cardapio #Pods{
+        background-size: contain;
+        background-position: bottom;
+    }
+}
+
+@media (max-width: 547px){
+    main #Cardapio ul{
+        font-size: .7em;
+    }
+
+    main #Info iframe{
+        width: 80%;
+    }
+}
+
+@media (min-width: 850px){
+    header img[alt='Whats']{
+        width: 7%;
+    }
+}
+
+@media (min-width: 978px){
+    main #Cardapio #Food{
+        height: 90vh; 
+    }
+
+    main #Cardapio #Food ul{
+        line-height: 50px;
+    }
+
+    main #Cardapio #Pods{
+        height: 80vh; 
+    }
+
+    main #Cardapio #Pods ul{
+        line-height: 45px;
+    }
+}
